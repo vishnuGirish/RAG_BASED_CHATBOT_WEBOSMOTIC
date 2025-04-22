@@ -421,7 +421,7 @@ def get_chat():
 
 
 
-@app.route('/chat_history', methods=['GET', 'POST'])
+@app.route('/chat_history', methods=['GET', 'POST'])   # INCOMPLETE- FOR FUTURE IMPROVAL
 def chat_history():
 
     if request.method == 'POST':

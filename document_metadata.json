@@ -1,0 +1,97 @@
+{
+    "e41d10ca-d76b-40d2-86bc-042c9d53f04e": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/e41d10ca-d76b-40d2-86bc-042c9d53f04e"
+    },
+    "6062ba56-2856-4629-af7d-a4ae792b1fb6": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/6062ba56-2856-4629-af7d-a4ae792b1fb6"
+    },
+    "fffb537e-6061-46e3-a77c-fc237377b572": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/fffb537e-6061-46e3-a77c-fc237377b572"
+    },
+    "55c8711e-8f6b-401f-be63-12870ca10a2c": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/55c8711e-8f6b-401f-be63-12870ca10a2c"
+    },
+    "9d2cd86e-6110-4d01-b257-5ce08680bde4": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/9d2cd86e-6110-4d01-b257-5ce08680bde4"
+    },
+    "68c613d8-74dc-4359-9b7f-e40d8e742711": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/68c613d8-74dc-4359-9b7f-e40d8e742711"
+    },
+    "d2775b81-ec96-4dd0-a889-d4d5f22de17e": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/d2775b81-ec96-4dd0-a889-d4d5f22de17e"
+    },
+    "7f69f94f-b503-49b4-8dcf-ceff56013089": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/7f69f94f-b503-49b4-8dcf-ceff56013089"
+    },
+    "d1f4a8bb-71eb-4edf-8d6d-5dda653e167d": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/d1f4a8bb-71eb-4edf-8d6d-5dda653e167d"
+    },
+    "0a995ede-cdae-4a05-b85f-a52a8d36146f": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/0a995ede-cdae-4a05-b85f-a52a8d36146f"
+    },
+    "ee2826bc-488d-4fcb-ab4a-e55a32fc1fb0": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/ee2826bc-488d-4fcb-ab4a-e55a32fc1fb0"
+    },
+    "53ce2403-0657-4558-af15-e06dcff3db18": {
+        "filename": "Cricket_A_Game_of_Tradition_Strate.txt",
+        "filepath": "./uploads\\Cricket_A_Game_of_Tradition_Strate.txt",
+        "vectorstore_path": "./chroma_db6/53ce2403-0657-4558-af15-e06dcff3db18"
+    },
+    "f40d858a-7409-4558-894a-123321890f1b": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/f40d858a-7409-4558-894a-123321890f1b"
+    },
+    "d922af1c-169d-4e8f-a272-d76d41d95566": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/d922af1c-169d-4e8f-a272-d76d41d95566"
+    },
+    "19be03d7-30d8-4516-bad8-21a124f2d022": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/19be03d7-30d8-4516-bad8-21a124f2d022"
+    },
+    "f609f0da-1f60-4903-bd21-3be139512eb9": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/f609f0da-1f60-4903-bd21-3be139512eb9"
+    },
+    "b1f58b79-0f08-43cb-9279-4b480e49f232": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/b1f58b79-0f08-43cb-9279-4b480e49f232"
+    },
+    "6a866a06-f6ca-4ca9-9315-09f85c7d345c": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/6a866a06-f6ca-4ca9-9315-09f85c7d345c"
+    },
+    "386b7a75-4d53-4a66-a63f-0e2f9db16f2a": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/386b7a75-4d53-4a66-a63f-0e2f9db16f2a"
+    }
+}

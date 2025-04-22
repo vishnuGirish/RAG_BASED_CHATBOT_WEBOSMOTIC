@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligence RAG Chatbot System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #f1f1f1;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .conversation-list {
+            margin-top: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .conversation-item {
+            padding: 8px;
+            margin-bottom: 5px;
+            background: #e9e9e9;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .conversation-item:hover {
+            background: #d9d9d9;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: #007acc;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .top-panel {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+
+        .top-panel input[type="file"] {
+            margin-right: 10px;
+        }
+
+        .chat-section {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: #f0f0f0;
+            padding: 10px;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .chat-box {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .msg {
+            margin-bottom: 10px;
+        }
+
+        .user {
+            color: blue;
+        }
+
+        .bot {
+            color: green;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            align-items: center;
+        }
+
+        .chat-input input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .chat-input button {
+            padding: 8px 15px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .chat-input label {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-input input[type="checkbox"] {
+            margin-left: 10px;
+        }
+
+        .bot strong {
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Conversations</h2>
+    <button onclick="startConversation()">Start New Conversation</button>
+    <div class="conversation-list" id="conversation-list"></div>
+</div>
+
+<div class="main-content">
+    <div class="header">Intelligence RAG Chatbot System</div>
+
+    <div class="top-panel">
+        <div>
+            <strong>Conversation ID:</strong> <span id="conversation-id">-</span>
+        </div>
+        <div>
+            <input type="file" id="file-input">
+            <button onclick="uploadFile()">Upload</button>
+            <button onclick="clearDocument()">Clear Doc</button>
+            <strong>Doc ID:</strong> <span id="document-id">-</span>
+        </div>
+    </div>
+
+    <div class="chat-section">
+        <div class="chat-area">
+            <div class="chat-header">Chat</div>
+            <div class="chat-box" id="chat-box"></div>
+            <div class="chat-input">
+                <input type="text" id="user-query" placeholder="Ask a question...">
+                <label>
+                    Require Citations
+                    <input type="checkbox" id="require-citations">
+                </label>
+                <button onclick="sendQuery()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let conversationId = null;
+    let documentId = null;
+    const conversations = {};
+
+    function startConversation() {
+        conversationId = crypto.randomUUID();
+        documentId = null;
+        conversations[conversationId] = { documentId: null, chat: [] };
+        updateConversationDisplay();
+        renderConversations();
+        clearChatBox();
+    }
+
+    function renderConversations() {
+        const conversationList = document.getElementById("conversation-list");
+        conversationList.innerHTML = "";
+        Object.keys(conversations).forEach(id => {
+            const item = document.createElement("div");
+            item.className = "conversation-item";
+            item.textContent = id;
+            item.onclick = () => switchConversation(id);
+            conversationList.appendChild(item);
+        });
+    }
+
+    function switchConversation(id) {
+        conversationId = id;
+        documentId = conversations[conversationId].documentId;
+        updateConversationDisplay();
+        clearChatBox();
+        loadChatHistory(conversationId);
+    }
+
+    function updateConversationDisplay() {
+        document.getElementById("conversation-id").textContent = conversationId || "-";
+        document.getElementById("document-id").textContent = documentId || "-";
+    }
+
+    function clearChatBox() {
+        document.getElementById("chat-box").innerHTML = "";
+    }
+
+    function appendMessage(sender, message) {
+        const chatBox = document.getElementById("chat-box");
+        const div = document.createElement("div");
+        div.className = `msg ${sender === "user" ? "user" : "bot"}`;
+        div.innerHTML = `<strong>${sender === "user" ? "You" : "Bot"}:</strong> ${message}`;
+        chatBox.appendChild(div);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function clearDocument() {
+        documentId = null;
+        if (conversationId && conversations[conversationId]) {
+            conversations[conversationId].documentId = null;
+        }
+        updateConversationDisplay();
+    }
+
+    async function uploadFile() {
+        const fileInput = document.getElementById("file-input");
+        if (!fileInput.files.length) return alert("Select a file first");
+
+        const formData = new FormData();
+        formData.append("document", fileInput.files[0]);
+
+        try {
+            const res = await fetch("/api/embedding", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await res.json();
+
+            if (data.status === "success" && data.document_id) {
+                documentId = data.document_id;
+                if (conversationId) {
+                    conversations[conversationId].documentId = documentId;
+                }
+                updateConversationDisplay();
+                alert("File uploaded successfully!");
+            } else {
+                alert("Upload failed: " + (data.message || "Unknown error"));
+            }
+        } catch (err) {
+            console.error("Upload error:", err);
+            alert("Failed to upload file.");
+        }
+    }
+
+    async function sendQuery() {
+        const input = document.getElementById("user-query");
+        const query = input.value.trim();
+        const requireCitations = document.getElementById("require-citations").checked;
+
+        if (!query || !conversationId || !documentId) {
+            alert("Ensure conversation and document are set.");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("query", query);
+        formData.append("session_id", conversationId);
+        formData.append("document_id", documentId);
+        formData.append("require_citations", requireCitations);
+
+        try {
+            const res = await fetch("/api/query", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await res.json();
+
+            appendMessage("user", query);
+
+            if (result.status === "success" && result.response.answer) {
+                appendMessage("bot", result.response.answer);
+            } else {
+                appendMessage("bot", "Sorry, I couldn't process your query.");
+            }
+
+            input.value = ''; // Clear input after sending
+        } catch (err) {
+            console.error("Query error:", err);
+            appendMessage("bot", "Error in processing your query.");
+        }
+    }
+</script>
+
+</body>
+</html>

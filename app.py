@@ -200,9 +200,11 @@ def home():
     return render_template('index.html', message=None)
 
 
+
 @app.route('/api/embedding', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
+        Conversation_id = request.form.get('conversation_id')
         file = request.files.get('document')
 
         if not file or not allowed_file(file.filename):
@@ -212,11 +214,12 @@ def index():
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(filepath)
 
+
         try:
             document_id = str(uuid.uuid4())
 
 
-            vectorstore_path = f"./chroma_db6/{document_id}"
+            vectorstore_path = f"./chroma_db/{Conversation_id}"
             os.makedirs(vectorstore_path, exist_ok=True)
 
             documents = load_document(filepath)
@@ -235,8 +238,44 @@ def index():
                 doc.metadata["document_id"] = document_id
                 doc.metadata["filename"] = filename
 
-            vectordb = Chroma.from_documents(docs, gemini_embeddings, persist_directory=vectorstore_path)
+
+
+            # Check if vectorstore already exists
+            if os.path.exists(vectorstore_path):
+                vectordb = Chroma(
+                    persist_directory=vectorstore_path,
+                    embedding_function=gemini_embeddings
+                )
+            else:
+                vectordb = Chroma.from_documents(
+                    docs,
+                    gemini_embeddings,
+                    persist_directory=vectorstore_path
+                )
+
+            # If loading existing, add new documents
+            if os.path.exists(vectorstore_path):
+                vectordb.add_documents(docs)
+
             vectordb.persist()
+
+
+# ===========================================
+            # vectordb = Chroma(persist_directory=persist_dir, embedding_function=embedding_function)
+            # # Retrieve the documents with metadata and embeddings
+            # all_data = vectordb.get(include=["documents", "metadatas", "embeddings"])
+
+            # # Display documents, metadata, and embeddings
+            # for i in range(len(all_data["documents"])):
+            #     print(f"\nDocument {i+1}")
+            #     print(f"Text: {all_data['documents'][i]}")
+            #     print(f"Metadata: {all_data['metadatas'][i]}")
+
+
+# ===========================================
+
+
+
 
 
             save_metadata(document_id, filename, filepath, vectorstore_path)
@@ -258,12 +297,11 @@ def get_chat():
         if request.method == 'POST':
 
             query = request.form.get("query")
-            session_id = request.form.get("conversation_id")
+            conversation_id = request.form.get("conversation_id")
             document_id = request.form.get("document_id")
             require_citations = request.form.get("require_citations")
 
-
-            persist_dir = f"./chroma_db6/{document_id}"
+            persist_dir = f"./chroma_db/{conversation_id}"
             
             
             vectordb = Chroma(
@@ -317,11 +355,11 @@ def get_chat():
             rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
             
             
-            def get_conversation_history(session_id: str) -> BaseChatMessageHistory:
-                if session_id not in store:
-                    store[session_id] = ChatMessageHistory()              
+            def get_conversation_history(conversation_id: str) -> BaseChatMessageHistory:
+                if conversation_id not in store:
+                    store[conversation_id] = ChatMessageHistory()              
 
-                return store[session_id]
+                return store[conversation_id]
             
             
             conversational_rag_chain = RunnableWithMessageHistory(
@@ -333,16 +371,16 @@ def get_chat():
             )
             
             
-            def get_rag_answer(query, session_id):
+            def get_rag_answer(query, conversation_id):
                 response = conversational_rag_chain.invoke(
                     {"input": query},
                     config={
-                        "configurable": {"session_id": session_id}
+                        "configurable": {"conversation_id": conversation_id}
                     }
                 )
                 return response
 
-            result = get_rag_answer(query, session_id)
+            result = get_rag_answer(query, conversation_id)
 
             result_answer = result["answer"]
 
@@ -426,13 +464,13 @@ def chat_history():
 
     if request.method == 'POST':
 
-        session_id = request.form.get("session_id")
+        conversation_id = request.form.get("conversation_id")
 
-        if session_id not in store:
-            return {"status": "error", "message": f"No conversation found for conversation ID: {session_id}"}
+        if conversation_id not in store:
+            return {"status": "error", "message": f"No conversation found for conversation ID: {conversation_id}"}
 
         conversation = []
-        for message in store[session_id].messages:
+        for message in store[conversation_id].messages:
             sender = "AI" if isinstance(message, AIMessage) else "User"
             conversation.append({
                 "sender": sender,

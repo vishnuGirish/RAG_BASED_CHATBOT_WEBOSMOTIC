@@ -93,5 +93,235 @@
         "filename": "fuel_injector_seminar.pdf",
         "filepath": "./uploads\\fuel_injector_seminar.pdf",
         "vectorstore_path": "./chroma_db6/386b7a75-4d53-4a66-a63f-0e2f9db16f2a"
+    },
+    "dba700ef-ab27-4d1e-a7e0-26043c54b31c": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/dba700ef-ab27-4d1e-a7e0-26043c54b31c"
+    },
+    "8de491e4-ee84-40a4-9455-6aaf6a1875bb": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/8de491e4-ee84-40a4-9455-6aaf6a1875bb"
+    },
+    "9c39eed0-b508-4f9c-96ce-8f56dd3fb87c": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/9c39eed0-b508-4f9c-96ce-8f56dd3fb87c"
+    },
+    "e4bcb3e3-2fd3-4812-981e-80c5b23f0632": {
+        "filename": "VishnuPP_RESUME_2025.pdf",
+        "filepath": "./uploads\\VishnuPP_RESUME_2025.pdf",
+        "vectorstore_path": "./chroma_db6/e4bcb3e3-2fd3-4812-981e-80c5b23f0632"
+    },
+    "c0fb3372-5645-4c16-941a-c706182daf2a": {
+        "filename": "VishnuPP_RESUME_2025.pdf",
+        "filepath": "./uploads\\VishnuPP_RESUME_2025.pdf",
+        "vectorstore_path": "./chroma_db6/c0fb3372-5645-4c16-941a-c706182daf2a"
+    },
+    "05eaf918-e1bd-4767-9e17-1f1a3cf01b82": {
+        "filename": "VishnuPP_RESUME_2025.pdf",
+        "filepath": "./uploads\\VishnuPP_RESUME_2025.pdf",
+        "vectorstore_path": "./chroma_db6/05eaf918-e1bd-4767-9e17-1f1a3cf01b82"
+    },
+    "bfee02cc-15ba-4543-8f42-2410552c063e": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/bfee02cc-15ba-4543-8f42-2410552c063e"
+    },
+    "920fed8b-29d3-4f43-8903-22219ad85228": {
+        "filename": "WO_AI_ML_Task_RAG.pdf",
+        "filepath": "./uploads\\WO_AI_ML_Task_RAG.pdf",
+        "vectorstore_path": "./chroma_db6/920fed8b-29d3-4f43-8903-22219ad85228"
+    },
+    "7a322104-a1ba-4273-8ef6-ff1281f7fe2b": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/7a322104-a1ba-4273-8ef6-ff1281f7fe2b"
+    },
+    "ba8150cb-ae23-4abf-99f0-e2746b78bcbc": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/ba8150cb-ae23-4abf-99f0-e2746b78bcbc"
+    },
+    "c6419088-14bf-4785-924d-041fe7491f80": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/c6419088-14bf-4785-924d-041fe7491f80"
+    },
+    "398219b6-ec20-49ac-b9ca-caf8167f8ffa": {
+        "filename": "WO_AI_ML_Task_RAG.pdf",
+        "filepath": "./uploads\\WO_AI_ML_Task_RAG.pdf",
+        "vectorstore_path": "./chroma_db6/398219b6-ec20-49ac-b9ca-caf8167f8ffa"
+    },
+    "1e45916e-5ebb-4a54-a9e6-2d6ea17b9a62": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/1e45916e-5ebb-4a54-a9e6-2d6ea17b9a62"
+    },
+    "4ce65662-aaf4-41d5-9c48-4c17412ac806": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/4ce65662-aaf4-41d5-9c48-4c17412ac806"
+    },
+    "fed6529b-3807-4ea7-bc08-1148beebec99": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/fed6529b-3807-4ea7-bc08-1148beebec99"
+    },
+    "2a991272-609f-4cc7-818e-c3dbc5b2a1ec": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/2a991272-609f-4cc7-818e-c3dbc5b2a1ec"
+    },
+    "a53c84b2-20fe-49ab-b44a-b76acd89198a": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db6/a53c84b2-20fe-49ab-b44a-b76acd89198a"
+    },
+    "61d82bce-bb03-48a5-91e7-dc23278125b3": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "19a3a2ac-da9a-4a63-8de8-ff16a9223cad": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "c788ddf4-2824-4752-800f-9c655c6188a1": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "3f02ed3f-fb3b-46cd-96b7-2697f18760ac": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "fff1febe-a5c9-4db5-b76b-e2e4eff38e6b": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "edecc2d9-2c04-4898-b62f-e84dee93f363": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "79a95efa-f5a0-4024-929b-44378df8be3e": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "735c9966-e090-4269-b494-eb65f473939a": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/None"
+    },
+    "dc3b8af1-faaa-4dda-bd15-2d907631a9da": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/bc00993e-2f6a-4c49-9b53-5eb805f022f8"
+    },
+    "bdb0a8a2-b580-4373-94c6-b3b57a00aeb9": {
+        "filename": "WO_AI_ML_Task_RAG.pdf",
+        "filepath": "./uploads\\WO_AI_ML_Task_RAG.pdf",
+        "vectorstore_path": "./chroma_db/bc00993e-2f6a-4c49-9b53-5eb805f022f8"
+    },
+    "8387a12f-1598-492c-825e-cc843f7853b9": {
+        "filename": "WO_AI_ML_Task_RAG.pdf",
+        "filepath": "./uploads\\WO_AI_ML_Task_RAG.pdf",
+        "vectorstore_path": "./chroma_db/268f8c65-aa6a-42b2-a81e-afc50c05d579"
+    },
+    "386866a5-0aa7-4c24-9b5f-31ddfe10620e": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/268f8c65-aa6a-42b2-a81e-afc50c05d579"
+    },
+    "f0024872-cd27-43f5-89b0-a49cad6b47d3": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/bdaaa73f-7d29-4a0a-b628-ed9d9632dc26"
+    },
+    "9b6abf60-1f51-49de-9131-18022d257635": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/bdaaa73f-7d29-4a0a-b628-ed9d9632dc26"
+    },
+    "915790b4-d511-48d9-8dc4-487326d54573": {
+        "filename": "WO_AI_ML_Task_RAG.pdf",
+        "filepath": "./uploads\\WO_AI_ML_Task_RAG.pdf",
+        "vectorstore_path": "./chroma_db/bdaaa73f-7d29-4a0a-b628-ed9d9632dc26"
+    },
+    "cc593781-9c5d-48dc-aed0-2c0a6ac55230": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/c7594ac4-7811-4ffb-bdad-86989de9e894"
+    },
+    "0f04553f-08e2-4aa3-9678-7a27e8dd6677": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/c7594ac4-7811-4ffb-bdad-86989de9e894"
+    },
+    "f9e3a5c1-b713-4f48-9090-e167e46691e3": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/c7594ac4-7811-4ffb-bdad-86989de9e894"
+    },
+    "78ec6986-5122-4984-8d9a-68fb11568e56": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/c7594ac4-7811-4ffb-bdad-86989de9e894"
+    },
+    "5806df48-78a0-4d72-b0cd-78df8b62dc6c": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/c7594ac4-7811-4ffb-bdad-86989de9e894"
+    },
+    "f94731e8-1291-4145-a5cf-526893d02385": {
+        "filename": "WO_AI_ML_Task_RAG.pdf",
+        "filepath": "./uploads\\WO_AI_ML_Task_RAG.pdf",
+        "vectorstore_path": "./chroma_db/c7594ac4-7811-4ffb-bdad-86989de9e894"
+    },
+    "3f4e692e-bd6c-4a82-a10f-62cd167fed7a": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/c7594ac4-7811-4ffb-bdad-86989de9e894"
+    },
+    "77ec1755-3bff-46d4-8c56-d9a36807d5fe": {
+        "filename": "WO_AI_ML_Task_RAG.pdf",
+        "filepath": "./uploads\\WO_AI_ML_Task_RAG.pdf",
+        "vectorstore_path": "./chroma_db/c44a74d8-90d8-4a52-9ad7-88d73a74ed4c"
+    },
+    "acd5b5a0-8740-46b0-a9fe-57ba7f1d0b51": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/c44a74d8-90d8-4a52-9ad7-88d73a74ed4c"
+    },
+    "1f8d749e-4673-4fb7-ae2c-df9741df354e": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/4e170f42-c292-4065-9d0f-0a0fe083c79f"
+    },
+    "912d1930-9714-439e-9aff-40e969f1c39a": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/723df49f-6d3d-4b25-b9a4-79c1c725a54f"
+    },
+    "df711cec-b8f1-442f-a03d-045b6ccaae7f": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/828a5d86-e096-41ea-951a-cbd9fd3f5337"
+    },
+    "bc2de7ab-391b-4984-a8e0-d92111f004d7": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/b0ce6a3e-3949-4d9c-bf63-96a5f6f40e9b"
+    },
+    "30285f5e-1aef-471f-b21a-f3ed2e6b14d8": {
+        "filename": "fuel_injector_seminar.pdf",
+        "filepath": "./uploads\\fuel_injector_seminar.pdf",
+        "vectorstore_path": "./chroma_db/b0ce6a3e-3949-4d9c-bf63-96a5f6f40e9b"
     }
 }

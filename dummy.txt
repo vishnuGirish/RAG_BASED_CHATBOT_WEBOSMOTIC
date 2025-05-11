@@ -1,0 +1,3 @@
+Artificial Intelligence is transforming industries worldwide.
+Natural Language Processing enables machines to understand human language.
+Vector databases like ChromaDB store and retrieve documents using embeddings.

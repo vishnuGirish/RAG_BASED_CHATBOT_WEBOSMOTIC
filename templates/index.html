@@ -252,8 +252,14 @@
         const fileInput = document.getElementById("file-input");
         if (!fileInput.files.length) return alert("Select a file first");
 
+        if (!conversationId) {
+            alert("Please start a conversation first.");
+            return;
+        }
+
         const formData = new FormData();
         formData.append("document", fileInput.files[0]);
+        formData.append("conversation_id", conversationId);  // ADD conversation_id here
 
         try {
             const res = await fetch("/api/embedding", {
@@ -316,6 +322,13 @@
             console.error("Query error:", err);
             appendMessage("bot", "Error in processing your query.");
         }
+    }
+
+    function loadChatHistory(conversationId) {
+        const chat = conversations[conversationId]?.chat || [];
+        chat.forEach(msg => {
+            appendMessage(msg.sender, msg.message);
+        });
     }
 </script>
 
